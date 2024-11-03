@@ -8,7 +8,6 @@
       autoindent = true;
       autowrite = true;
       confirm = true;
-      clipboard = "unnamedplus";
       cursorline = true;
       list = true;
       expandtab = true;

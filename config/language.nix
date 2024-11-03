@@ -5,6 +5,37 @@ in
     plugins = {
       cmp = {
         enable = true;
+        cmdline = {
+          "/" = {
+            mapping = {
+              __raw = "cmp.mapping.preset.cmdline()";
+            };
+            sources = [
+              {
+                name = "buffer";
+              }
+            ];
+          };
+          ":" = {
+            mapping = {
+              __raw = "cmp.mapping.preset.cmdline()";
+            };
+            sources = [
+              {
+                name = "path";
+              }
+              {
+                name = "cmdline";
+                option = {
+                  ignore_cmds = [
+                    "Man"
+                    "!"
+                  ];
+                };
+              }
+            ];
+          };
+        };
         settings = {
           autoEnableSources = true;
           performance = {
@@ -20,7 +51,6 @@ in
               name = "buffer";
               keywordLength = 3;
             }
-            {name = "supermaven";}
           ];
 
           snippet.expand = "function(args) require('luasnip').lsp_expand(args.body) end";
@@ -135,8 +165,6 @@ in
         };
       };
       cmp-nvim-lsp.enable = true;
-      cmp-buffer.enable = true;
-      cmp-path.enable = true;
       cmp-treesitter.enable = true;
       dap.enable = true;
       none-ls = {
@@ -242,6 +270,7 @@ in
         servers = {
           jsonls.enable = true;
           marksman.enable = true;
+          clangd.enable = true;
           #nil-ls.enable = true;
           nixd.enable = true;
           yamlls.enable = true;
