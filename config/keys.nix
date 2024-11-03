@@ -160,11 +160,6 @@
           icon = "󰉓";
           desc = "List Workspace Folders";
         }
-        {
-          __unkeyed-1 = "<leader>h";
-          icon = "󱡅";
-          desc = "Harpoon";
-        }
       ];
     };
   };
