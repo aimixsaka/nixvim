@@ -3,11 +3,7 @@
     fzf-lua = {
       enable = true;
       keymaps = {
-        "<leader>/" = {
-          action = "live_grep";
-          options.desc = "Live Grep";
-        };
-        "<leader>," = {
+        "<leader>sb" = {
           action = "buffers";
           options.desc = "Switch Buffer";
           settings = {
@@ -22,6 +18,10 @@
         "<leader>gs" = {
           action = "git_status";
           options.desc = "Git Status";
+        };
+        "<leader>sg" = {
+          action = "live_grep";
+          options.desc = "Live Grep";
         };
         "<leader>s\"" = {
           action = "registers";

@@ -34,55 +34,19 @@
       };
     };
 
-    harpoon = {
-      enable = true;
-      saveOnToggle = true;
-      saveOnChange = true;
-      enterOnSendcmd = false;
-      markBranch = true;
-    };
-
-    hop.enable = true;
-    illuminate.enable = true;
     lazygit.enable = true;
-    nvim-lightbulb.enable = true;
     lualine = {
       enable = true;
       settings.options.globalstatus = true;
     };
     luasnip.enable = true;
 
-    mini = {
-      enable = true;
-      modules = {
-        surround = {};
-        indentscope = {
-          symbol = "│";
-          options = {try_as_border = true;};
-        };
-      };
-    };
-
-    noice.enable = true;
-    notify.enable = true;
     nvim-autopairs.enable = true;
     nvim-colorizer.enable = true;
-    oil = {
-      enable = true;
-      settings = {
-        columns = [
-          "icons"
-          "permissions"
-          "size"
-          "mtime"
-        ];
-        default_file_explorer = true;
-        delete_to_trash = true;
-        skip_confirmation_for_simple_edits = true;
-      };
-    };
     render-markdown.enable = true;
     todo-comments.enable = true;
+
+    nvim-tree.enable = true;
 
     treesitter = {
       enable = true;

@@ -242,7 +242,7 @@ in
         servers = {
           jsonls.enable = true;
           marksman.enable = true;
-          nil-ls.enable = true;
+          #nil-ls.enable = true;
           nixd.enable = true;
           yamlls.enable = true;
           taplo.enable = true;

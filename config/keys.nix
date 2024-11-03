@@ -56,16 +56,9 @@
           icon = "";
         }
 
-        # Keys with custom icons / labels
         {
-          __unkeyed-1 = "<leader>e";
-          icon = "󰏇";
-          desc = "Oil";
-        }
-        {
-          __unkeyed-1 = "<leader>/";
-          icon = "";
-          desc = "Live Grep";
+          __unkeyed-1 = "<leader><Space>";
+          desc = "Manually Save";
         }
         {
           __unkeyed-1 = "<leader>da";
@@ -177,40 +170,30 @@
   };
 
   keymaps = [
-    # Normal mode
-    {
-      mode = "i";
-      key = "jk";
-      action = "<CMD>noh<CR><ESC>";
-      options.desc = "Normal mode and clear highlight";
-    }
-    {
-      mode = "i";
-      key = "<ESC>";
-      action = "<CMD>noh<CR><ESC>";
-      options.desc = "Normal mode and clear highlight";
-    }
-    {
-      mode = "n";
-      key = "<ESC>";
-      action = "<CMD>noh<CR><ESC>";
-      options.desc = "Normal mode and clear highlight";
-    }
-
-    # Activate Oil
     {
       mode = "n";
       key = "<leader>e";
-      action = "<CMD>Oil<CR>";
-      options.desc = "Oil";
+      action = "<CMD>NvimTreeToggle<CR>";
+      options.desc = "Nvim Tree";
     }
-
-    # Hop command
+    # manually save all
     {
       mode = "n";
-      key = "m";
-      action = "<CMD>HopChar1<CR>";
-      options.desc = "Hop Char 1";
+      key = "<leader><Space>";
+      action = "<CMD>wa<CR>";
+      options.desc = "Manually Save";
+    }
+    {
+      mode = "i";
+      key = "<ESC>";
+      action = "<CMD>noh<CR><ESC>";
+      options.desc = "Normal mode and clear highlight";
+    }
+    {
+      mode = "n";
+      key = "<ESC>";
+      action = "<CMD>noh<CR><ESC>";
+      options.desc = "Normal mode and clear highlight";
     }
 
     # Add undo breakpoints
@@ -233,36 +216,11 @@
       options.desc = "Undo breakpoint";
     }
 
-    # Harpoon commands
-    {
-      mode = "n";
-      key = "<leader>ha";
-      action = "<CMD>lua require('harpoon.mark').add_file()<CR>";
-      options.desc = "Add File";
-    }
-    {
-      mode = "n";
-      key = "<leader>hn";
-      action = "<CMD>lua require('harpoon.ui').nav_next()<CR>";
-      options.desc = "Next File";
-    }
-    {
-      mode = "n";
-      key = "<leader>hp";
-      action = "<CMD>lua require('harpoon.ui').nav_prev()<CR>";
-      options.desc = "Previous File";
-    }
     {
       mode = "n";
       key = "<leader>hm";
       action = "<CMD>Telescope harpoon marks<CR>";
       options.desc = "Telescope Menu";
-    }
-    {
-      mode = "n";
-      key = "<leader>hq";
-      action = "<CMD>lua require('harpoon.ui').toggle_quick_menu()<CR>";
-      options.desc = "Quick Menu";
     }
 
     # FZF-Lua custom commands -- I want to limit to current directory
