@@ -31,6 +31,13 @@
           };
           extraSpecialArgs = {};
         };
+        miniumNvimModule = {
+          inherit pkgs;
+          module = {...}: {
+            imports = [./config/minium];
+          };
+          extraSpecialArgs = {};
+        };
         rustNixvimModule = {
           inherit pkgs;
           module = {pkgs, ...}: {
@@ -95,6 +102,7 @@
           config.allowUnfree = true;
         };
         baseNvim = nixvim'.makeNixvimWithModule baseNixvimModule;
+        miniumNvim = nixvim'.makeNixvimWithModule miniumNvimModule;
         fullNvim = nixvim'.makeNixvimWithModule allNixVimModule;
         rustNvim = nixvim'.makeNixvimWithModule rustNixvimModule;
         goNvim = nixvim'.makeNixvimWithModule goNixvimModule;
@@ -106,17 +114,12 @@
           default = nixvimLib.check.mkTestDerivationFromNixvimModule baseNixvimModule;
         };
         packages = {
-          # Lets you run `nix run .` to start nixvim
           default = baseNvim;
-          # Lets you run `nix run .#full` to start nixvim with Full Languages configuration
+          minium = miniumNvim;
           full = fullNvim;
-          # Lets you run `nix run .#rust` to start nixvim with Rust configuration
           rust = rustNvim;
-          # Lets you run `nix run .#golang` to start nixvim with Go configuration
           golang = goNvim;
-          # Lets you run `nix run .#python` to start nixvim with Python configuration
           python = pythonNvim;
-          # Lets you run `nix run .#javascript` to start nixvim with JS/TS configuration
           javascript = javascriptNvim;
         };
       };
