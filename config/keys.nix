@@ -301,28 +301,53 @@
     }
 
     # Windows
+    # NOTE: for zellij neovim navigation
+    #{
+    #  mode = "n";
+    #  key = "<M-h>";
+    #  action = "<CMD>ZellijNavigateLeft<CR>";
+    #  options.desc = "Navigate Window Left";
+    #}
+    #{
+    #  mode = "n";
+    #  key = "<M-j>";
+    #  action = "<CMD>ZellijNavigateDown<CR>";
+    #  options.desc = "Navigate Window Down";
+    #}
+    #{
+    #  mode = "n";
+    #  key = "<M-k>";
+    #  action = "<CMD>ZellijNavigateUp<CR>";
+    #  options.desc = "Navigate Window Up";
+    #}
+    #{
+    #  mode = "n";
+    #  key = "<M-l>";
+    #  action = "<CMD>ZellijNavigateRight<CR>";
+    #  options.desc = "Navigate Window Right";
+    #}
     {
+      key = "<C-h>";
+      action = "<CMD>wincmd h<CR>";
       mode = "n";
-      key = "<M-h>";
-      action = "<CMD>ZellijNavigateLeft<CR>";
       options.desc = "Navigate Window Left";
     }
     {
+      key = "<C-j>";
+      action = "<CMD>wincmd j<CR>";
       mode = "n";
-      key = "<M-j>";
-      action = "<CMD>ZellijNavigateDown<CR>";
       options.desc = "Navigate Window Down";
     }
     {
+      key = "<C-k>";
+      action = "<CMD>wincmd k<CR>";
       mode = "n";
-      key = "<M-k>";
-      action = "<CMD>ZellijNavigateUp<CR>";
       options.desc = "Navigate Window Up";
     }
     {
+      key = "<C-l>";
+      action = "<CMD>wincmd l<CR>";
       mode = "n";
-      key = "<M-l>";
-      action = "<CMD>ZellijNavigateRight<CR>";
       options.desc = "Navigate Window Right";
     }
     {
