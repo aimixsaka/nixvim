@@ -9,7 +9,7 @@
       relativenumber = true;
 
       autoindent = true;
-      // show tab as '>', trailing space as '-'
+      # show tab as '>', trailing space as '-'
       list = true;
       shiftround = true;
       smartcase = true;

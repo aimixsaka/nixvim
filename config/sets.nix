@@ -42,7 +42,7 @@
     luasnip.enable = true;
 
     nvim-autopairs.enable = true;
-    nvim-colorizer.enable = true;
+    colorizer.enable = true;
     render-markdown.enable = true;
     todo-comments.enable = true;
 
@@ -57,5 +57,7 @@
 
     vim-surround.enable = true;
     web-devicons.enable = true;
+    # nav between neovim and zellij
+    zellij-nav.enable = true;
   };
 }

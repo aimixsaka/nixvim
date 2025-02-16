@@ -1,8 +1,10 @@
 {
   description = "A nixvim configuration";
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    #nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
+    nixpkgs.url = "github:NixOS/nixpkgs/1da52dd49a127ad74486b135898da2cef8c62665";
     nixvim.url = "github:nix-community/nixvim";
+    nixvim.inputs.nixpkgs.follows = "nixpkgs";
     flake-parts.url = "github:hercules-ci/flake-parts";
     rust-overlay.url = "github:oxalica/rust-overlay";
   };
@@ -85,6 +87,15 @@
           };
           extraSpecialArgs = {};
         };
+        cNixvimModule = {
+          inherit pkgs;
+          module = {pkgs, ...}: {
+            imports = [
+              ./config
+              ./config/c
+            ];
+          };
+        };
         allNixVimModule = {
           inherit pkgs;
           module = {pkgs, ...}: {
@@ -94,6 +105,7 @@
               ./config/golang
               ./config/python
               ./config/javascript
+              ./config/c
             ];
           };
         };
@@ -108,6 +120,7 @@
         goNvim = nixvim'.makeNixvimWithModule goNixvimModule;
         pythonNvim = nixvim'.makeNixvimWithModule pythonNixvimModule;
         javascriptNvim = nixvim'.makeNixvimWithModule javascriptNixvimModule;
+        cNixvimNvim = nixvim'.makeNixvimWithModule cNixvimModule;
       in {
         checks = {
           # Run `nix flake check .` to verify that your config is not broken
@@ -121,6 +134,7 @@
           golang = goNvim;
           python = pythonNvim;
           javascript = javascriptNvim;
+          c = cNixvimNvim;
         };
       };
     };
