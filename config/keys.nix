@@ -46,7 +46,7 @@
           icon = "";
         }
         {
-          __unkeyed-1 = "<leader>d/";
+          __unkeyed-1 = "<leader>/";
           group = "Search";
           icon = "";
         }
@@ -59,6 +59,10 @@
         {
           __unkeyed-1 = "<leader><Space>";
           desc = "Manually Save";
+        }
+        {
+          __unkeyed-1 = "<leader>y";
+          desc = "Save to system clipboard";
         }
         {
           __unkeyed-1 = "<leader>da";
@@ -166,11 +170,20 @@
 
   keymaps = [
     {
+      mode = "v";
+      key = "<leader>y";
+      action = "\"+y";
+      options.desc = "Save selected text to system clipboard";
+    }
+
+    # Activate Oil
+    {
       mode = "n";
       key = "<leader>e";
-      action = "<CMD>NvimTreeToggle<CR>";
-      options.desc = "Nvim Tree";
+      action = "<CMD>Oil<CR>";
+      options.desc = "Oil";
     }
+
     # manually save all
     {
       mode = "n";

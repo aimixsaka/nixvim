@@ -46,7 +46,20 @@
     render-markdown.enable = true;
     todo-comments.enable = true;
 
-    nvim-tree.enable = true;
+    oil = {
+      enable = true;
+      settings = {
+        columns = [
+          "icons"
+          "permissions"
+          "size"
+          "mtime"
+        ];
+        default_file_explorer = true;
+        delete_to_trash = true;
+        skip_confirmation_for_simple_edits = true;
+      };
+    };
 
     treesitter = {
       enable = true;
@@ -58,6 +71,7 @@
     vim-surround.enable = true;
     web-devicons.enable = true;
     # nav between neovim and zellij
-    zellij-nav.enable = true;
+    #zellij-nav.enable = true;
+    comment.enable = true;
   };
 }

@@ -10,6 +10,8 @@
       confirm = true;
       cursorline = true;
       list = true;
+      # show tab as space as usual, trailing space as '-'
+      listchars = "tab:  ,trail:-,nbsp:+";
       expandtab = true;
       shiftround = true;
       shiftwidth = 2;
