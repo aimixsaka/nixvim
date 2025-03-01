@@ -48,9 +48,6 @@ in
             "<Up>" = "cmp.mapping.select_prev_item(${selectOpts})";
             "<Down>" = "cmp.mapping.select_next_item(${selectOpts})";
 
-            "<C-p>" = "cmp.mapping.select_prev_item(${selectOpts})";
-            "<C-n>" = "cmp.mapping.select_next_item(${selectOpts})";
-
             "<C-u>" = "cmp.mapping.scroll_docs(-4)";
             "<C-d>" = "cmp.mapping.scroll_docs(4)";
 
@@ -84,7 +81,7 @@ in
               )
             '';
 
-            "<Tab>" = ''
+            "<C-n>" = ''
               cmp.mapping(
                 function(fallback)
                   local col = vim.fn.col('.') - 1
@@ -101,7 +98,7 @@ in
               )
             '';
 
-            "<S-Tab>" = ''
+            "<C-p>" = ''
               cmp.mapping(
                 function(fallback)
                   if cmp.visible() then
