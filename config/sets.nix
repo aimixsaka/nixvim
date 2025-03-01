@@ -65,7 +65,8 @@
       enable = true;
 
       folding = false;
-      settings.indent.enable = true;
+      #settings.indent.enable = true;
+      settings.highlight.enable = true;
     };
 
     vim-surround.enable = true;
