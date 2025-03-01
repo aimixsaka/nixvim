@@ -250,9 +250,7 @@ in
 
       trouble = {
         enable = true;
-        settings = {
-          use_diagnostic_signs = true;
-        };
+        settings.useDiagnosticSigns = true;
       };
     };
   }

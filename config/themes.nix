@@ -2,7 +2,7 @@
   colorschemes = {
     catppuccin = {
       enable = true;
-      flavour = "latte";
+      settings.flavour = "latte";
     };
     #oxocarbon = {
     #  enable = true;
