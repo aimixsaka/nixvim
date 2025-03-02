@@ -1,10 +1,13 @@
-{pkgs, ...}: {
+{ pkgs, ... }:
+{
   plugins = {
     cmp-dap.enable = true;
     dap-ui = {
       enable = true;
     };
-    dap-virtual-text = {enable = true;};
+    dap-virtual-text = {
+      enable = true;
+    };
     dap = {
       enable = true;
       signs = {
@@ -188,7 +191,10 @@
       };
     }
     {
-      mode = ["n" "v"];
+      mode = [
+        "n"
+        "v"
+      ];
       key = "<leader>de";
       action = "<cmd>lua require('dapui').eval()<cr>";
       options = {
@@ -200,7 +206,9 @@
       mode = "n";
       key = "<leader>df";
       action = "<CMD>lua require('dap.ext.vscode').load_launchjs()<CR><CMD>Telescope dap configurations<CR>";
-      options = {desc = "Debug Configurations";};
+      options = {
+        desc = "Debug Configurations";
+      };
     }
   ];
 
@@ -211,5 +219,5 @@
     require('dap').listeners.before.event_exited['dapui_config'] = require('dapui').close
   '';
 
-  extraPlugins = [(pkgs.vimPlugins.telescope-dap-nvim)];
+  extraPlugins = [ (pkgs.vimPlugins.telescope-dap-nvim) ];
 }

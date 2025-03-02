@@ -51,7 +51,7 @@
       keymaps = {
         todoTelescope = {
           key = "<leader>st";
-          keywords = ["TODO"];
+          keywords = [ "TODO" ];
         };
       };
     };

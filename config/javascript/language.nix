@@ -2,10 +2,10 @@
   plugins = {
     conform-nvim = {
       settings = {
-        formatters_by_ft.javascript = ["prettier"];
-        formatters_by_ft.typescript = ["prettier"];
-        formatters_by_ft.javascriptreact = ["prettier"];
-        formatters_by_ft.typescriptreact = ["prettier"];
+        formatters_by_ft.javascript = [ "prettier" ];
+        formatters_by_ft.typescript = [ "prettier" ];
+        formatters_by_ft.javascriptreact = [ "prettier" ];
+        formatters_by_ft.typescriptreact = [ "prettier" ];
       };
     };
     lsp.servers.ts_ls = {

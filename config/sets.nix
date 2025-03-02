@@ -1,17 +1,17 @@
-{pkgs, ...}: {
+{ pkgs, ... }:
+{
   plugins = {
-    #auto-save.enable = true;
-    bufferline = {
-      # TODO: remove this once you are used to not having it
-      enable = false;
-      settings = {
-        options = {
-          always_show_bufferline = false;
-          buffer_close_icon = "";
-          diagnostics = "nvim_lsp";
-        };
-      };
-    };
+    auto-save.enable = true;
+    # bufferline = {
+    #   enable = true;
+    #   settings = {
+    #     options = {
+    #       always_show_bufferline = false;
+    #       buffer_close_icon = "";
+    #       diagnostics = "nvim_lsp";
+    #     };
+    #   };
+    # };
 
     gitsigns = {
       enable = true;
@@ -23,14 +23,28 @@
         };
         signcolumn = true;
         signs = {
-          add = {text = "│";};
-          change = {text = "│";};
-          changedelete = {text = "~";};
-          delete = {text = "_";};
-          topdelete = {text = "‾";};
-          untracked = {text = "┆";};
+          add = {
+            text = "│";
+          };
+          change = {
+            text = "│";
+          };
+          changedelete = {
+            text = "~";
+          };
+          delete = {
+            text = "_";
+          };
+          topdelete = {
+            text = "‾";
+          };
+          untracked = {
+            text = "┆";
+          };
         };
-        watch_gitdir = {follow_files = true;};
+        watch_gitdir = {
+          follow_files = true;
+        };
       };
     };
 

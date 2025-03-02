@@ -2,7 +2,9 @@
   plugins = {
     conform-nvim = {
       enable = true;
-      settings = { formatters_by_ft.python = [ "black" ]; };
+      settings = {
+        formatters_by_ft.python = [ "black" ];
+      };
     };
     lsp.servers.pylsp = {
       enable = true;
@@ -23,4 +25,3 @@
     none-ls.sources.formatting.black.enable = true;
   };
 }
-
