@@ -189,7 +189,7 @@ in
 
     lsp = {
       enable = true;
-      inlayHints = true;
+      # inlayHints = true;
       keymaps = {
         diagnostic = {
           "<leader>E" = "open_float";
