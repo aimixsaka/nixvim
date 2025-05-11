@@ -254,8 +254,12 @@ in
         yamlls.enable = true;
         taplo.enable = true;
         fish_lsp.enable = true;
+        zls.enable = true;
       };
     };
+
+    # language specific plugins
+    zig.enable = true;
 
     trouble = {
       enable = true;
