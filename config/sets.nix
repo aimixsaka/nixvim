@@ -50,7 +50,7 @@
 
     lazygit.enable = true;
     lualine = {
-      enable = true;
+      enable = false;
       settings.options.globalstatus = true;
     };
     luasnip.enable = true;
